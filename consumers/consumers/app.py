@@ -54,8 +54,8 @@ def delete_user():
     return response
 
 
-# CONSULTAR USUÁRIO
-@app.route('/consumers/person', methods=['GET'])
+# CONSULTAR USUÁRIOS
+@app.route('/consumers/persons', methods=['GET'])
 def get_persons():
     response = {
         "statusCode": 200,
@@ -64,7 +64,7 @@ def get_persons():
     return response
 
 @app.route('/consumers/person/{id}', methods=['GET'])
-def get_persons(id):
+def get_person(id):
     response = {
         "statusCode": 200,
         "body": {id: {"name": "John Doe", "phone": "123-456-7890"}}
@@ -114,7 +114,7 @@ def get_companies():
     return response  
 
 
-@app.route('/consumers/companies/{id}', methods=['GET'])
+@app.route('/consumers/company/{id}', methods=['GET'])
 def get_company(id):
     response = {
         "statusCode": 200,
